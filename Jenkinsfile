@@ -9,6 +9,12 @@ pipeline {
         CI = 'true'
     }
     stages {
+        stage('checkout') {
+           steps {
+              checkout scm
+           }
+        }
+    
         stage('Build') {
             steps {
                 sh 'npm install'
