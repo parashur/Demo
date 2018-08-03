@@ -14,7 +14,8 @@ pipeline {
          stage("checkout"){
              steps {
                 checkout scm
-            }
+             }
+         }
          stage("result") {
              steps {
                  echo "Build successful"
